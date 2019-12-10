@@ -9,9 +9,9 @@
        (if (= divcount 20)
 	   (return num))))
 
-(defun find-divisible120 ()
+(defun find-divisible-1-20 ()
   (loop for num from 200000000 to 300000000 when (divisible-1-20 num) collect num))
 
 ;; Answer
 ;; 232792560
-(format t "~a~%" (find-divisible120))
+(format t "~a~%" (find-divisible-1-20))
