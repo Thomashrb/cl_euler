@@ -13,7 +13,8 @@
   "Return elements from-to that are multiples of any ofs"
   (remove-if-not 'multiplep list))
 
+(defparameter *multiples-1000* (find-multiples(loop :for n :below 1000 :collect n)))
+
 ;; Answer
 ;; 233168
-(defparameter *multiples-1000* (find-multiples(loop :for n :below 1000 :collect n)))
 (format t "~a~%" (apply '+ *multiples-1000*))
