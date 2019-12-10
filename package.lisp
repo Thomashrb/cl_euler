@@ -2,4 +2,4 @@
 
 (defpackage #:euler.utils
   (:use #:cl)
-  (:export #:primep #:iinto-list))
+  (:export #:assert-true #:primep #:iinto-list))

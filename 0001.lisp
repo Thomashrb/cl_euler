@@ -15,6 +15,9 @@
 
 (defparameter *multiples-1000* (find-multiples(loop :for n :below 1000 :collect n)))
 
+;; Test
+(euler.utils:assert-true (= 23 (apply #'+ (find-multiples (loop for n below 10 collect n)))))
+
 ;; Answer
 ;; 233168
-(format t "~a~%" (apply '+ *multiples-1000*))
+(format t "~a~%" (apply #'+ *multiples-1000*))
