@@ -14,4 +14,4 @@
 
 ;; Answer
 ;; 232792560
-(format t "~a~%" (find-divisible-1-20))
+;(format t "~a~%" (find-divisible-1-20))
