@@ -9,9 +9,9 @@
 (defun primep (num)
   (if (> num 1)
       (loop for i from 2 to (isqrt num) do
-	   (if (= 0 (mod num i))
-	       (return nil))
-	 finally (return t)) ;; number is prime
+           (if (= 0 (mod num i))
+               (return nil))
+         finally (return t)) ;; number is prime
       nil))
 
 
