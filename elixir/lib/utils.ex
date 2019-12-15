@@ -17,7 +17,9 @@ defmodule Euler.Utils do
 
   # Inefficient because it does not break
   def is_prime(num) do
-    list = for x <- 2..(Integer.floor_div(num, 2)), (rem(num, x) == 0), do: x
-    length(list) == 0
+    primes = for x <- 2..(Integer.floor_div(num, 2)), (rem(num, x) == 0), do: x
+    length(primes) == 0
   end
+
+  def doprimes(from, untill) do for x <- from..untill, is_prime(x), do: x end
 end
