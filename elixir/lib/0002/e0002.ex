@@ -4,15 +4,19 @@ defmodule Euler.E0002 do
   # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
   # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-  def fib(1) do
-    1
-  end
+  # Tailcall
 
-  def fib(2) do
-    2
-  end
+  def fib(a, _, 0 ) do a end
 
-  # NOTE: non tailcall
+  def fib(a, b, n) do fib(b, a+b, n-1) end
+
+
+  # Non tailcall
+
+  def fib(1) do 1 end
+
+  def fib(2) do 2 end
+
   def fib(n) do
     fib(n - 1) + fib(n - 2)
   end
