@@ -1,4 +1,7 @@
 defmodule Euler.Utils do
+  import Enum
+  import Integer
+
   def sum_list([]) do
     0
   end
@@ -15,10 +18,8 @@ defmodule Euler.Utils do
     true
   end
 
-  # Inefficient because it does not break
   def is_prime(num) do
-    primes = for x <- 2..Integer.floor_div(num, 2), rem(num, x) == 0, do: x
-    length(primes) == 0
+    not any?(2..floor_div(num, 2), fn x -> rem(num, x) == 0 end)
   end
 
   def doprimes(range) do
