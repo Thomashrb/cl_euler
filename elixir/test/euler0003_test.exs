@@ -3,7 +3,7 @@ defmodule Euler.E0003Test do
   alias Euler.Utils
 
   setup_all _primes do
-    {:ok, list: Utils.doprimes(2, 7000)}
+    {:ok, list: Utils.doprimes(2..7000)}
   end
 
   test "EXAMPLE e003", primes do
