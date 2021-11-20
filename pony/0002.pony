@@ -23,7 +23,7 @@ primitive Two
     var fib_this: USize = 2
     while fib_this < below do
       fib_last = fib_this = fib_last + fib_this
-      if fib_this.rem(2) == 0 then
+      if (fib_this % 2) == 0 then
         e_fibs.push(fib_this)
       end
     end

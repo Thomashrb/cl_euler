@@ -10,7 +10,7 @@ build:
 test: build/euler
 	build/euler
 
-run: build/euler
+run:
 	build/euler
 
 clean:

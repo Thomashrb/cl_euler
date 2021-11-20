@@ -7,6 +7,7 @@ actor Main is TestList
   fun tag tests(test: PonyTest) =>
     test(_TestOne)
     test(_TestTwo)
+    test(_TestThree)
 
 class iso _TestOne is UnitTest
   fun name(): String => "multiples/One"
@@ -21,3 +22,10 @@ class iso _TestTwo is UnitTest
 
   fun apply(h: TestHelper) =>
     h.assert_eq[USize](4613732, Two.sum_even_fibs())
+
+
+class iso _TestThree is UnitTest
+  fun name(): String => "multiples/Three"
+
+  fun apply(h: TestHelper) =>
+    h.assert_eq[USize](6857, Three.max_prime_fac())
