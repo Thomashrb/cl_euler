@@ -21,11 +21,8 @@ primitive Two
     let e_fibs: Array[USize] iso = [2]
     var fib_last: USize = 1
     var fib_this: USize = 2
-    var fib_temp: USize = 0
     while fib_this < below do
-      fib_temp = fib_this
-      fib_this = fib_last + fib_this
-      fib_last = fib_temp
+      fib_last = fib_this = fib_last + fib_this
       if fib_this.rem(2) == 0 then
         e_fibs.push(fib_this)
       end
