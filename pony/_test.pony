@@ -8,6 +8,7 @@ actor Main is TestList
     test(_TestOne)
     test(_TestTwo)
     test(_TestThree)
+    test(_TestFour)
 
 class iso _TestOne is UnitTest
   fun name(): String => "multiples/One"
@@ -29,3 +30,10 @@ class iso _TestThree is UnitTest
 
   fun apply(h: TestHelper) =>
     h.assert_eq[USize](6857, Three.max_prime_fac())
+
+
+class iso _TestFour is UnitTest
+  fun name(): String => "multiples/Four"
+
+  fun apply(h: TestHelper) =>
+    h.assert_eq[USize](906609, Four.max_palindrome())
